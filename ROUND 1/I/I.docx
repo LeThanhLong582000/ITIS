@@ -1,0 +1,40 @@
+Matrix Binary
+
+---
+
+một ma trận vuông có chiều dài cạnh là 1 số chẵn được gọi là good nếu nó chỉ bảo gồm các số 0-1 và tổng các số 1 là lẻ.
+
+một ma trận được gọi là supperMatrix nếu tất cả các ma trận vuông con kích thước chẵn của nó đều là một ma trận good.
+
+cho ma trận 0-1 kích thước (n,m) trong đó n > m. Yêu cầu bạn là thưc hiện ít phép biến đổi nhất để ma trận đã cho trở thành supperMatrix. Với mỗi thao tác bạn có quyên thay đổi a_i thành 1 0.
+
+---
+
+## Input
+
+dòng đầu tiên gồm 2 số nguyên dương n,m là kích thước ma trận.
+
+n dòng tiếp theo mỗi dòng gồm m kí tự liên tiếp chỉ gồm 0 và 1 mô tả ma trận.
+
+input thỏa mãn:
+
+ 1<=m <=n và m*n<=10^5
+
+## Output 
+
+In ra trên 1 dòng duy nhất đáp án bài toán
+
+## Examples
+
+* inputs:
+3 3
+101
+001
+110
+
+* outputs:
+2
+
+* giải thích:
+
+thay đổi a_(0,0) = 0 và a(1,1) = 1.
