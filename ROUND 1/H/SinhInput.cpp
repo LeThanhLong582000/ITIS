@@ -12,20 +12,29 @@ long long Create(long long l, long long r)
 //sinh test nho
 void createTest(ofstream &fout)
 {
-    int N = Create(0, 10);
-    fout << N << endl;
+    int T = Create(1, 10);
+    fout << T << endl;
+    for(int i = 1; i <= T; i++){
+        fout << Create(1,100) << ' ' << Create(1,100) << endl;
+    }
 }
 //sinh test vua
 void createTest2(ofstream &fout)
 {
-    int N = Create(11,50);
-    fout << N << endl;
+    int T = Create(100, 10000);
+    fout << T << endl;
+    for(int i = 1; i <= T; i++){
+        fout << Create(1e5,1e9) << ' ' << Create(1e7,1e9) << endl;
+    }
 }
 //sinh test lon
 void createTest3(ofstream &fout)
 {
-    int N = Create(51,90);
-    fout << N << endl;
+    int T = 10000;
+    fout << T << endl;
+    for(int i = 1; i <= T; i++){
+        fout << Create(1e8,1e9) << ' ' << Create(1e8,1e9) << endl;
+    }
 }
 
 //cho nay khong can sua
