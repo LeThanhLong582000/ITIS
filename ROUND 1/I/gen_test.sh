@@ -10,7 +10,7 @@ g++ sol.cpp -o main
 read num_test
 for ((i=1;i<=num_test;i++))
 do
-  ./main < "./tests/$i" > "./tests/out$i"
+  ./main < "./tests/$i.in" > "./tests/$i.out"
 done
 
 echo "done-delete-file-excutor"
