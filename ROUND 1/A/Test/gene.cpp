@@ -1,85 +1,71 @@
-#include<bits/stdc++.h>
-#define ll long long
-#define for(i,a,b) for(long long i = a; i < b; i++)
-#define ld long double
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
+#include <ctime>
+#include <deque>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <map>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <stack>
+
 using namespace std;
 
-ll n, k;
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+#define FTB(i,a,b) for(LL i=a;i<=b;i++)
+#define FT(i,a,b) for(LL i=a;i<b;i++)
+#define FGB(i,a,b) for(LL i=a;i>=b;i--)
+#define FG(i,a,b) for(LL i=a;i>b;i--)
+#define endl "\n"
+#define PB push_back
+#define mp make_pair
+#define fi first
+#define se second
+#define debug cout<<"VL\n";
+#define PI 3.1415926535897
+#define lbnd(dau,cuoi,giatri) lower_bound(dau,cuoi,giatri)
+#define ubnd(dau,cuoi,giatri) upper_bound(dau,cuoi,giatri)
+typedef double DB;
+typedef long long LL;
+typedef unsigned long long UL;
+typedef long double LD;
+typedef pair<LL, LL> II;
+typedef vector<LL> VI;
+typedef vector<bool> VB;
 
-ll creat(ll a ,ll b)						
-{											
-	return (ll)rng() % (b - a + 1) + a;					// Create random number in [a, b]
-}
 
-void sinhInput(int numberTest) 
-{
-	for (i, 1, 6) 
-	{
-		char fileIn[20];
-		sprintf(fileIn, "%d.in", i);
-		fstream out(fileIn, ios::out);
-		n = creat(1, 1e3); 
-		out << n << " ";
-		k = creat(1,3); out << k;
-    	out.close();
-	}
-	for (i,5,11) 
-	{
-		char fileIn[20];
-		sprintf(fileIn, "%d.in", i);
-		fstream out(fileIn, ios::out);
-		n = creat(1e3, 1e6); 
-		out << n << " ";
-		k = creat(4,6);
-		out << k;
-    	out.close();
-	}
-	for (i,11,15)
-	{
-		char fileIn[20];
-		sprintf(fileIn, "%d.in", i);
-		fstream out(fileIn, ios::out);
-		n = creat(1e6, 1e9); 
-		out << n << " ";
-		k = 8; out << k;
-    	out.close();
-	}
-	char fileIn[20];
-	sprintf(fileIn, "%d.in", 15);
-	fstream out(fileIn, ios::out);
-	n = 1e9; 
-	out << n << " ";
-	k = 8; out << k;
-    out.close();
-}
 
-void sinhOutput(int numberTest) 
-{
-	for (j, 1, numberTest+1) 
-	{
-		char fileIn[20];
-		char fileOut[20];
-		sprintf(fileIn,"%d.in", j);
-		sprintf(fileOut, "%d.out", j);
-		fstream in(fileIn, ios::in);
-		fstream out(fileOut, ios::out);
-		// bat dau sinh output
-		in >> n >> k;
-		long long ans = 1;
-		for(i,0,k){
-			ans *= 10;
-		}
-		out << n*ans/__gcd(ans,n);
-		in.close();
-		out.close();
-	}
-}
 
-int main() 
-{
-	int numberTest = 15;
-//	sinhInput(numberTest);
-	sinhOutput(numberTest);
+
+int main() {
+	srand(time(NULL));
+	string file[10] = {
+    "0.in",
+    "1.in",
+    "2.in",
+    "3.in",
+    "4.in",
+    "5.in",
+    "6.in",
+    "7.in",
+    "8.in",
+    "9.in",
+	};
+  freopen(file[8].c_str(), "w", stdout);
+  int n = 1000;
+  cout << n << "\n";
+  FTB(i, 1, n) {
+    cout << rand() << " ";
+  }
+
+
+
 	return 0;
 }
