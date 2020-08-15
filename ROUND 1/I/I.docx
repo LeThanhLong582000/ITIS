@@ -8,7 +8,7 @@ một ma trận được gọi là supperMatrix nếu tất cả các ma trận 
 
 cho ma trận 0-1 kích thước (n,m) trong đó n > m. Yêu cầu bạn là thưc hiện ít phép biến đổi nhất để ma trận đã cho trở thành supperMatrix. Với mỗi thao tác bạn có quyên thay đổi a_i thành 1 0.
 
-Lưu ý : Ma trận vuông kích thước 0 cũng được coi là 1 ma tr
+Lưu ý : Ma trận vuông kích thước 0 cũng được coi là 1 ma trận good.
 ---
 
 ## Input
