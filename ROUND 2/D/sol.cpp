@@ -19,7 +19,6 @@ void xuli(){
 int main(){
 	xuli();
 	int t;
-	for(int i=1;i<=50;i++) cout << a[i] << endl;
 	cin >> t;
 	while(t--){
 		int n;
