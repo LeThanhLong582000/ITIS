@@ -3,11 +3,11 @@ n,m = map(int,input().split())
 def checkOne(col):
     cnt = 0
     for i in range(n):
-        cnt += (a[i][col] == 1)
-    if cnt > n//2 + n%2:
-        return False
-    else : 
+        cnt += a[i][col]
+    if cnt < n//2 + n%2:
         return True
+    else : 
+        return False
     
 for _ in range(n):
     b = list(map(int,input().split()))
