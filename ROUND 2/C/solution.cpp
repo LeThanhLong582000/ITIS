@@ -26,7 +26,7 @@ void Preprocess() {
 }
 
 int Try(long long n, int v[]) {
-    int res = 0;
+    int res = 1000; 
     if (n < 2) return 0;
     for (int i = 2; i*i <= n; i++) {
         int tmp[40];
@@ -76,3 +76,6 @@ main () {
     float seconds = diff / CLOCKS_PER_SEC;
     cerr << "\nRunning in " << seconds << " seconds" << endl;
 }
+
+
+// code đã sửa để up lên auto sai =))
