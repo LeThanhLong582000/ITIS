@@ -134,7 +134,7 @@ void Solve() {
 			isPrime[i*j] = false;
 		}
 	}
-	vector<int> primeOverComposite(n+1, 1);
+	vector<int> primeOverComposite(n+1, 0);
 	int offset = n; i64 ans = 0;
 	segtree<int> ST = segtree<int>(2*n+1);
 	if (!isPrime[a[0]]) primeOverComposite[0] = 0;
@@ -152,13 +152,19 @@ void Solve() {
 
 /************** [MAIN] **************/
 int main(int argc, char* argv[]) {
-
+	#ifndef Akikaze
+		if (OImode) {
+			assert(freopen(infile, "r", stdin));
+			assert(freopen(outfile, "w", stdout));
+		}
+	#endif
+	
 	ios_base::sync_with_stdio(false);
 	if (!Interactive) cin.tie(NULL);
 	
 	int T = 1; if (MultiTest) {cin >> T; cin.ignore();}
 	while(T--) {Input(); Solve();}
-	cerr << "running is" << 1.0*clock()/1000 << '\n';
+	
 	return 0;
 }
 /************************************/
